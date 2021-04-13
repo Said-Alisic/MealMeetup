@@ -3,7 +3,7 @@ import {
     Card, CardHeader, CardMedia, 
     CardContent, Avatar, Typography  
 } from '@material-ui/core';
-import Dialog from '../Dialog'
+import MealContent from './MealContent';
 import { cardStyles } from '../../assets/styles/sharedStyles';
 
 
@@ -17,12 +17,12 @@ function Meal(props) {
                             Meal Meetup
                             </Avatar>}
                         action={
-                            <Dialog meal={props.meal}/>
+                            <MealContent meal={props.meal}/>
                         }
             />
-        <CardMedia className={classes.cardImg} image={props.meal.strMealThumb}/>
+        <CardMedia className={classes.cardImg} image={props.meal.strMealThumb} alt={props.meal.strMealThumb}/>
         <CardContent className={classes.cardContent}>
-            <Typography variant="overline" className={classes.cardOverline}>{props.meal.strArea} Dish</Typography> 
+            <Typography  className={classes.cardOverline}>{props.meal.strArea} Dish</Typography> 
             <Typography className={classes.cardMainText}>{props.meal.strMeal}</Typography>  
             <Typography className={classes.cardInfoText}>• Category: {props.meal.strCategory}</Typography>     
             { props.meal.strTags 

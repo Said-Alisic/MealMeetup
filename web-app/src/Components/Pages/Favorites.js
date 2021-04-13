@@ -7,7 +7,6 @@ function Favorites() {
 
     return (
         <>
-            <h1></h1>
             <Typography className={classes.mainText} variant="h4">Favorites Page </Typography>
             <Typography className={classes.infoText} variant="h5">
             (Still under development)

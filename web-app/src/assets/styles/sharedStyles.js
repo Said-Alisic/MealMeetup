@@ -8,7 +8,7 @@ export const appStyles = makeStyles({
         // 'linear-gradient(45 deg, #F0DEB4 50%, #F3E5C3 55%, #F5EACF 60%, #F7EED9 65%, #F9F1E1 70%, #FAF4E7 75%, #FBF6EC 80%, #FCF8F0 85%, #FDF9F3 90%, #FDFAF5 95%, %ffffff 100%)',
 
     },
-});
+}, {index: 1});
 
 export const navBarStyles = makeStyles({
     navBar: {
@@ -23,23 +23,26 @@ export const navBarStyles = makeStyles({
         paddingTop: '0.5%',
         backgroundColor: '#F0DEB4',
     },
-});
+}, {index: 1});
 
 export const searchBarStyles = makeStyles((theme) => ({
     searchBar: {
-        marginLeft: '25%',
-        marginRight: '25%',
+        marginLeft: 'auto',
+        marginRight: 'auto',
         marginBottom: theme.spacing(5), 
+        alignItems: 'center',
+        display: 'flex',
+        width: '35%',
     },
     searchBtn: {
         marginRight: 'auto',
     },
     inputField: {
-        minWidth: '90%',
+        minWidth: '80%',
         marginLeft: '5%',
         marginRight: 'auto',
     },
-}));
+}), {index: 1});
 
 export const containerStyles = makeStyles({
     container: {
@@ -48,7 +51,7 @@ export const containerStyles = makeStyles({
         backgroundColor: '#ffffff',
         marginTop: '2vh',
     },
-});
+}, {index: 1});
 
 export const dialogStyles = makeStyles({
     dialog: {
@@ -74,7 +77,7 @@ export const dialogStyles = makeStyles({
         textDecorationLine: 'underline',
         marginBottom: '2%',
     }
-});
+}, {index: 1});
 
 export const cardStyles = makeStyles({
     card: {
@@ -114,9 +117,9 @@ export const cardStyles = makeStyles({
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
     }
-});
+}, {index: 1});
 
-export const gridStyles = makeStyles({
+export const mealGridStyles = makeStyles((theme) => ({
     grid: {
         background: '#ffffff', 
     },
@@ -124,7 +127,31 @@ export const gridStyles = makeStyles({
         width:  '100%',
         height: '100%',
     },
-});
+    pagination: {
+        marginTop: theme.spacing(2)
+    }
+}), {index: 1});
+
+export const randomMealStyles = makeStyles((theme) => ({
+    
+    root: {
+        paddingTop: '3%',
+      },
+      gridItem: {
+        maxHeight: '100%',
+        maxWidth: '100%',
+        background: 'rgba(0, 0, 0, 0.0)',
+      },
+      image: {
+        height: '100%', 
+        width: '100%',
+        marginRight: 'auto',
+      },
+      titleText: {
+        fontStyle: 'oblique', 
+        marginTop: 'auto',
+      }
+}), {index: 1});
 
 export const textStyles = makeStyles({
     mainText: {
@@ -135,4 +162,4 @@ export const textStyles = makeStyles({
     infoText: {
         textAlign: 'center',
     },
-});
+}, {index: 1});
