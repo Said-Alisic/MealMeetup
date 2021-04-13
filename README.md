@@ -1,8 +1,8 @@
-# **ImageGallery**
+# **Meal Meetup**
 
 ### Introduction
 
-Welcome to MealMeetup, a simple React.js web application! The application connects 
+Welcome to Meal Meetup, a simple React.js web application! The application connects 
 to the "TheMealDB" API from `https://www.themealdb.com`, which hosts many free recipes 
 from meaty dishes to vegan delicacies and more. This is a simple project I made to try my hand on 
 creating an intuitive React web application that is hosted on vercel with a simple functionality.
