@@ -16,7 +16,7 @@ creating an intuitive React web application that is hosted on vercel with a simp
 
 ## Demo
 
-- `https://meal-meetup-ejrqj8hsl-said-alisic.vercel.app/`
+- `https://meal-meetup-said-alisic.vercel.app/`
 
 ### Prerequisites for running on local machine
 
