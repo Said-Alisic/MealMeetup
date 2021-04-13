@@ -1,9 +1,7 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
 import { Link as NavLink } from 'react-router-dom';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
 import { navBarStyles } from '../assets/styles/sharedStyles';
 
 function NavBar() {
@@ -17,14 +15,18 @@ function NavBar() {
                                 to="/">
                         <HomeOutlinedIcon />
                     </IconButton>
-                    <IconButton component={NavLink} 
+                    <Button component={NavLink} 
+                                to="/random">
+                        Random Meal
+                    </Button>
+                    <Button component={NavLink} 
                                 to="/favorites">
-                        <FavoriteBorderIcon />
-                    </IconButton>
-                    <IconButton component={NavLink} 
+                        Favorites
+                    </Button>
+                    <Button component={NavLink} 
                                 to="/about">
-                        <HelpOutlineOutlinedIcon />
-                    </IconButton>
+                        About
+                    </Button>
                 </Toolbar>
             </AppBar>  
         </div>

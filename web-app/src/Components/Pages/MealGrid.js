@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import Meal from './Meal';
-import SearchBar from '../SearchBar'
-import { gridStyles } from '../../assets/styles/sharedStyles';
+import SearchBar from '../SearchBar';
+import { mealGridStyles } from '../../assets/styles/sharedStyles';
 import { getMealByName } from '../../api/mealApi';
 // import json_data from '../../assets/json/preset_meals.json';
 
 
 function MealGrid() {
-    const classes = gridStyles();
+    const classes = mealGridStyles();
 
     const [meals, setMeals] = useState();
     const [input, setInput] = useState("");
@@ -25,10 +25,8 @@ function MealGrid() {
         })
     }, [])
 
-    const handleSubmit = (e) => {
-      
-      e.preventDefault()
-      
+    const handleSubmit = (e) => {    
+      e.preventDefault() 
 
       if(input) {
         getMealByName(input)
@@ -46,7 +44,6 @@ function MealGrid() {
       setInput(e.target.value)
     };
     
-
     const handlePageChange = (e, value) => {
       setPage(value);
     };
