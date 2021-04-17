@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Typography } from '@material-ui/core';
+import {  Typography, Divider } from '@material-ui/core';
 import { dialogStyles } from '../assets/styles/sharedStyles';
 
 function Ingredients(props) {
@@ -19,10 +19,13 @@ function Ingredients(props) {
     // Add table for displaying ingredients
     return (
         <div className={classes.dialogInfoText}>
+            <Divider />
             <Typography variant="h5" className={classes.dialogIngredients}>Ingredients</Typography>
                 {ingredients.map((item, index) => {
                     return (
-                        <Typography key={index}><b>Ingredient: </b>{item} <b>| Measure:</b> {measures[index]} </Typography>
+                        <Typography key={index} className={classes.dialogText}>
+                            <b>Ingredient: </b>{item} <b>| Measure:</b> {measures[index]} 
+                        </Typography>
                     )
                 })}
         </div>

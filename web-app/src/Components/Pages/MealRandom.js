@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { 
-    Grid, Typography
-} from '@material-ui/core';
+import { Container, Typography } from '@material-ui/core';
 import { randomMealStyles } from '../../assets/styles/sharedStyles';
 import { getRandomMeal } from '../../api/mealApi';
 import Ingredients from '../Ingredients';
@@ -26,38 +24,26 @@ function MealGrid() {
 
     if(random) {
       return (
-        <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid className={classes.gridItem} item xs={3}>
-                        <img className={classes.image} src={random[0].strMealThumb} alt={random[0].strMealThumb}/>
-                </Grid>
-                <Grid className={classes.gridItem} item xs={9}>
-                    <Grid className={classes.gridItem} item xs={12}>
-                        <Typography className={classes.titleText} variant="h4">How to make: {random[0].strMeal}</Typography>
-                    </Grid>
-                    <Grid className={classes.gridItem} item xs={12}>
-                        { random[0].strTags 
-                            ? <Typography>• Tags: {random[0].strTags}</Typography> 
-                            : <Typography>• No Tags</Typography> 
-                        }  
-                    </Grid>
-                </Grid>
-                <Grid className={classes.gridItem} item xs={3}>
-                    <Typography>{random[0].strArea}Dish</Typography> 
-                </Grid>
-                <Grid className={classes.gridItem} item xs={9}>
-                   <Grid className={classes.gridItem} item xs={12}>
-                        <Typography >{random[0].strInstructions}</Typography>
-                    </Grid>
-                    <Grid className={classes.gridItem} item xs={12}>
-                        <Typography className={classes.titleText}><Ingredients meal={random[0]}/></Typography>
-                    </Grid>
-                    <Grid className={classes.gridItem} item xs={12}>
-                        <Typography>• Category: {random[0].strCategory}</Typography>  
-                    </Grid>
-                </Grid>
-            </Grid>
-        </div>
+        <Container className={classes.root}>
+          <div>
+            <Typography className={classes.mainText} variant="h4">How to make:<i> {random[0].strMeal}</i></Typography>
+            <img className={classes.image} src={random[0].strMealThumb} alt={random[0].strMealThumb}/>
+            <Typography className={classes.dishText}>{random[0].strArea}Dish</Typography> 
+            <Typography className={classes.infoText}><b>• Category:</b> {random[0].strCategory}</Typography>
+            {random[0].strTags 
+                ? <Typography className={classes.infoText}><b>• Tags:</b> {random[0].strTags}</Typography> 
+                : <Typography className={classes.infoText}><b>• No Tags</b></Typography> 
+            } 
+          </div>
+          <div className={classes.inner}>
+            
+            <Typography className={classes.infoText}>{random[0].strInstructions}</Typography>
+          </div>
+          <div className={classes.inner}>
+          <Ingredients meal={random[0]}/>
+          </div>
+     
+        </Container>
       )
     } else {
       return (

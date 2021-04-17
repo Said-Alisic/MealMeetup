@@ -11,19 +11,19 @@ function NavBar() {
         <div className={classes.container}>
             <AppBar className={classes.navBar} >
                 <Toolbar>
-                    <IconButton component={NavLink} 
+                    <IconButton className={classes.home} component={NavLink} 
                                 to="/">
-                        <HomeOutlinedIcon />
+                        <HomeOutlinedIcon className={classes.homeBtn}/>
                     </IconButton>
-                    <Button component={NavLink} 
+                    <Button className={classes.btn} component={NavLink} 
                                 to="/random">
                         Random Meal
                     </Button>
-                    <Button component={NavLink} 
+                    <Button className={classes.btn} component={NavLink} 
                                 to="/favorites">
                         Favorites
                     </Button>
-                    <Button component={NavLink} 
+                    <Button className={classes.btn} component={NavLink} 
                                 to="/about">
                         About
                     </Button>

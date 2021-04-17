@@ -33,6 +33,7 @@ function MealGrid() {
         .then((res) => {
           setMeals(res.data.meals)
           setInput("")
+          setPage(1)
         })
         .catch((err) => {
           console.log(err);
@@ -65,7 +66,8 @@ function MealGrid() {
               page={page}
               defaultPage={1}
               boundaryCount={2}
-              onChange={handlePageChange}                   
+              onChange={handlePageChange}    
+              className={classes.pagination}               
           />
         </>
       )
