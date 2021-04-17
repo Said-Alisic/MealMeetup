@@ -5,12 +5,10 @@ export const appStyles = makeStyles({
         // minWidth: '100vw',
         minHeight: '100vh',
         backgroundColor: '#F0DEB4',
-        // 'linear-gradient(45 deg, #F0DEB4 50%, #F3E5C3 55%, #F5EACF 60%, #F7EED9 65%, #F9F1E1 70%, #FAF4E7 75%, #FBF6EC 80%, #FCF8F0 85%, #FDF9F3 90%, #FDFAF5 95%, %ffffff 100%)',
-
     },
 }, {index: 1});
 
-export const navBarStyles = makeStyles({
+export const navBarStyles = makeStyles((theme) => ({
     navBar: {
         background: '#ffffff',
         maxWidth: '88vw',
@@ -18,12 +16,35 @@ export const navBarStyles = makeStyles({
         maxHeight: '15vh',
         position: 'static',
         marginLeft: '6%',
+        
     },
     container: {
         paddingTop: '0.5%',
         backgroundColor: '#F0DEB4',
     },
-}, {index: 1});
+    home: {
+        marginRight: 'auto',
+        
+    },
+    homeBtn: {
+        color: 'black',
+        fontSize: '4.5vh',
+        
+    },
+    btn: {
+        marginRight: theme.spacing(2),
+        textTransform: 'none',
+        fontSize: '2.5vh',
+        '&:hover': {
+            textDecoration: 'underline',
+        },
+        '&:focus': {
+            textDecoration: 'underline',
+        },
+        
+        
+    }
+}), {index: 1});
 
 export const searchBarStyles = makeStyles((theme) => ({
     searchBar: {
@@ -41,6 +62,7 @@ export const searchBarStyles = makeStyles((theme) => ({
         minWidth: '80%',
         marginLeft: '5%',
         marginRight: 'auto',
+        fontSize: '2.5vh',
     },
 }), {index: 1});
 
@@ -50,6 +72,7 @@ export const containerStyles = makeStyles({
         minHeight: '84vh',
         backgroundColor: '#ffffff',
         marginTop: '2vh',
+        boxShadow: '0 7px 11px 0 rgba(0, 0, 0, 0.11), 0 6px 20px 0 rgba(0, 0, 0, 0.18)',
     },
 }, {index: 1});
 
@@ -64,19 +87,23 @@ export const dialogStyles = makeStyles({
     },
     dialogInfoText: {
         color: 'black',
-        marginBottom: '5%',
+        paddingBottom: '2%',
+    },
+    dialogText: {
+        fontSize: '2.35vh',
     },
     dialogAction: {
         background: '#F0DEB4',
     },
     dialogBtn: {
-        fontSize: '0.65rem',
         textDecorationLine: 'underline',
+        fontSize: '1.5vh',
     },
     dialogIngredients: {
-        textDecorationLine: 'underline',
-        marginBottom: '2%',
-    }
+        paddingTop: '1%',
+        marginBottom: '1%',
+        fontSize: '3.5vh',
+    },
 }, {index: 1});
 
 export const cardStyles = makeStyles({
@@ -85,14 +112,15 @@ export const cardStyles = makeStyles({
         height: '100%',
         background: '#ffffff',
         borderStyle: 'solid',
-        border: 1,
+        border: 2.6,
+        borderColor: '#8CA3BA',
         '&:hover': {
-            boxShadow: '0 7px 11px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09)',
+            boxShadow: '0 7px 11px 0 rgba(0, 0, 0, 0.24), 0 6px 20px 0 rgba(0, 0, 0, 0.31)',
         },
     },
     cardAvatar: {
-        fontSize: '0.65rem',
         textAlign: 'center',
+        fontSize: '1.4vh',
     },
     cardImg: {
         paddingTop: '70.00%',
@@ -102,20 +130,21 @@ export const cardStyles = makeStyles({
         maxWidth: '100%',
     },
     cardMainText: {
-        fontSize: '1.2rem',
         fontStyle: 'oblique', 
         overflow: "hidden",
         textOverflow: "ellipsis",
-        whiteSpace: "nowrap",       
+        whiteSpace: "nowrap",  
+        fontSize: '2.8vh',     
     },
     cardOverline: {
         fontWeight: 600, 
+        fontSize: '2.25vh',
     },
     cardInfoText: {
-        fontSize: '0.85rem',
         overflow: "hidden",
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
+        fontSize: '2vh',
     }
 }, {index: 1});
 
@@ -136,21 +165,30 @@ export const randomMealStyles = makeStyles((theme) => ({
     
     root: {
         paddingTop: '3%',
+        backgroundColor: '#ffffff',
       },
-      gridItem: {
-        maxHeight: '100%',
-        maxWidth: '100%',
-        background: 'rgba(0, 0, 0, 0.0)',
-      },
-      image: {
-        height: '100%', 
-        width: '100%',
-        marginRight: 'auto',
-      },
-      titleText: {
-        fontStyle: 'oblique', 
-        marginTop: 'auto',
-      }
+    inner: {
+        paddingTop: '3%',
+    },
+    image: {
+        height: '35%', 
+        width: '35%',
+        marginLeft: '35%',
+    },
+    mainText: {
+        textAlign: 'center',
+        marginLeft: '5%',
+        paddingBottom: '2%',
+        fontSize: '5vh',
+    },
+    dishText: {
+        fontWeight: 600, 
+        fontSize: '4vh',
+        paddingBottom: '0.5%',
+    },
+    infoText: {
+        fontSize: '2.35vh',
+    }
 }), {index: 1});
 
 export const textStyles = makeStyles({
@@ -158,8 +196,10 @@ export const textStyles = makeStyles({
         paddingTop: '3%',
         textAlign: 'center',
         fontWeight: 600, 
+        fontSize: '5vh',
     },
     infoText: {
         textAlign: 'center',
+        fontSize: '3vh',
     },
 }, {index: 1});

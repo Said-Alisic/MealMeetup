@@ -1,14 +1,16 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import MealGrid from './MealGrid';
+import { textStyles } from '../../assets/styles/sharedStyles';
 
 function Home() {
+    const classes = textStyles();
 
     return (
         <>
             <Grid container>
                 <Grid item>
-                    <h1>Meal Meetup</h1>
+                    <Typography className={classes.mainText} variant="h4">Meal Meetup</Typography>
                 </Grid>
                 <Grid item>
                 </Grid>
